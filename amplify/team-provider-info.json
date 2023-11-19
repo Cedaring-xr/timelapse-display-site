@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-timelapsedisplay-dev-100331-authRole",
+      "UnauthRoleArn": "arn:aws:iam::751841649472:role/amplify-timelapsedisplay-dev-100331-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::751841649472:role/amplify-timelapsedisplay-dev-100331-authRole",
+      "Region": "us-east-2",
+      "DeploymentBucketName": "amplify-timelapsedisplay-dev-100331-deployment",
+      "UnauthRoleName": "amplify-timelapsedisplay-dev-100331-unauthRole",
+      "StackName": "amplify-timelapsedisplay-dev-100331",
+      "StackId": "arn:aws:cloudformation:us-east-2:751841649472:stack/amplify-timelapsedisplay-dev-100331/e9d180e0-83d8-11ee-b040-02aea595cffd",
+      "AmplifyAppId": "d2zforex81luny"
+    },
+    "categories": {
+      "auth": {
+        "timelapsedisplay3ea8ef89": {}
+      },
+      "storage": {
+        "timelapsedisplay6fd6d368": {
+          "bucketName": "mattraylongtermtimelapsecontainer",
+          "region": "us-east-2"
+        }
+      }
+    }
+  }
+}
