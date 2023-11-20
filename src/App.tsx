@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './globals.css'
 import { MdKeyboardDoubleArrowDown } from 'react-icons/md'
-import mapIcons4transparent from './assets/mapIcons4Transparent.png'
+import cloudIconTransparent from './assets/cloudIconTransparent.png'
 import cameraIconTransparent from './assets/cameraIconTransparent.png'
 import videoIconTransparent from './assets/videoIconTransparent.png'
 import Footer from './components/Footer'
@@ -10,7 +10,6 @@ import DisplayProject from './components/DisplayProject'
 
 function App() {
 	const [pictures, setPictures] = useState<string[]>([])
-	const [count, setCount] = useState(0)
 
 	useEffect(() => {
 		fetchPictures()
@@ -54,7 +53,7 @@ function App() {
 						<div className="sub-section flex justify-around">
 							<img src={cameraIconTransparent} className="icon-image" />
 							<img src={videoIconTransparent} className="icon-image" />
-							<img src={mapIcons4transparent} className="icon-image" />
+							<img src={cloudIconTransparent} className="icon-image" />
 						</div>
 						<MdKeyboardDoubleArrowDown
 							className="text-white text-5xl mx-auto hover:text-lime-300 bg-neutral-700 rounded-lg p-0"
@@ -63,7 +62,7 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full px-12 bg-slate-800 flex flex-col">
+			<div className="w-full px-12 py-8 bg-slate-800 flex flex-col">
 				<DisplayProject projectName="first time lapse" />
 				<DisplayProject projectName="second time lapse" />
 				<DisplayProject projectName="third time lapse" />
