@@ -74,10 +74,10 @@ function App() {
 					</div>
 				</div>
 			</div>
-			<div className="w-full px-12 py-8 bg-slate-800 flex flex-col">
+			<div className="w-full px-2 md:px-6 lg:px-12 py-8 bg-slate-800 flex flex-col">
 				<GearSetup />
 				<DisplayProject
-					projectName="first time lapse"
+					projectName="First Test Sunset"
 					videoTitle="Bad Sunset Compilation"
 					imageList={imageList}
 				/>

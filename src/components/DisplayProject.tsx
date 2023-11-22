@@ -16,9 +16,9 @@ const DisplayProject: React.FC<projectProps> = ({ projectName, videoTitle, image
 	const fetchImages = () => {}
 
 	return (
-		<div className="w-full border-neutral-100 border-opacity-80 border-4 rounded-xl bg-transparent flex items-center justify-center m-8">
-			<div className="w-full mx-4 min-h-[175px] rounded-md bg-stone-700 text-white flex justify-center pt-8">
-				<span>{projectName}</span>
+		<div className="w-full border-neutral-100 border-opacity-80 border-4 rounded-xl bg-transparent items-center justify-center my-8 overflow-hidden">
+			<div className="w-full rounded-md bg-stone-700 text-white justify-center flex flex-col">
+				<h2 className="sans-font text-3xl text-center mt-1">{projectName}</h2>
 				<Video title={videoTitle} />
 				<ImageCarousel name="sunset" description="adsfasdfasd" imageList={imageList} />
 			</div>

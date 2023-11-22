@@ -7,14 +7,14 @@ type videoProps = {
 
 const Video: React.FC<videoProps> = ({ title }) => {
 	return (
-		<div>
-			<p>{title}</p>
-			<div id="video container">
-				<video width="300" height="270" controls>
-					<source src="" type="video/mp4"></source>
-					Your browser does not support the video tag
-				</video>
-			</div>
+		<div id="video container" className="mx-auto">
+			<h3 className="absolute">{title}</h3>
+			<iframe
+				title="test-video"
+				width="525"
+				height="344"
+				src="https://mattraylongtermtimelapsecontainer.s3.us-east-2.amazonaws.com/timeLapse1/timelapse1video.mp4"
+			></iframe>
 		</div>
 	)
 }
