@@ -29,11 +29,11 @@ function GearSetup() {
 					<h3 className="text-2xl text-center text-purple-400 mb-4">Description</h3>
 					<p className="text-center">
 						The Raspberry Pi is running a small Python script that configures the settings on the camera,
-						takes a series of pictures on a set interval, and then aves the pictures on the device. After
-						the camera is done, the pictures are compiled into a short video, then both the video and
+						takes a series of pictures on a set interval, and then saves the pictures on the device. After
+						the script is done, the pictures are compiled into a short video, then both the video and
 						pictures are uploaded to AWS S3 for cloud storage. A Lambda function is run on the S3 bucket
-						upon upload to resize the images and create a thumbnail of the video. The images are then
-						imported into the website for viewing.
+						upon upload to resize the images to a smaller size. The images are then fetched by the website
+						and then displayed.
 					</p>
 				</div>
 			</div>

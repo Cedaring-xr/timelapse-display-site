@@ -35,7 +35,15 @@ function App() {
 		}
 	}
 
-	const scrollDown = () => {}
+	const scrollDown = () => {
+		const targetSection = document.getElementById('display-container')
+		if (targetSection) {
+			window.scrollTo({
+				top: targetSection.offsetTop,
+				behavior: 'smooth'
+			})
+		}
+	}
 
 	return (
 		<>
@@ -51,7 +59,7 @@ function App() {
 								This is a display of different time lapse projects that I am recording. Thank you for
 								checking it out. The time lapses are recorded using a Raspberry Pi 4 with the new camera
 								module. Photos and videos are stored in AWS S3 and I am running a lambda function to
-								collection thumbnails from the videos.
+								resize images in order to make it easier to display.
 							</p>
 						</div>
 						<div className="sub-section flex justify-around">
@@ -76,13 +84,15 @@ function App() {
 			</div>
 			<div className="w-full px-2 md:px-6 lg:px-12 py-8 bg-slate-800 flex flex-col">
 				<GearSetup />
-				<DisplayProject
-					projectName="First Test Sunset"
-					videoTitle="Bad Sunset Compilation"
-					imageList={imageList}
-				/>
-				<DisplayProject projectName="second time lapse" videoTitle="" imageList={['']} />
-				<DisplayProject projectName="third time lapse" videoTitle="" imageList={['']} />
+				<div id="display-container">
+					<DisplayProject
+						projectName="First Test Sunset"
+						videoTitle="Bad Sunset Compilation"
+						imageList={imageList}
+					/>
+					<DisplayProject projectName="second time lapse" videoTitle="" imageList={['']} />
+					<DisplayProject projectName="third time lapse" videoTitle="" imageList={['']} />
+				</div>
 			</div>
 			<div className=""></div>
 			<Footer />
