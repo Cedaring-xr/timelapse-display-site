@@ -7,6 +7,7 @@ import videoIconTransparent from './assets/videoIconTransparent.png'
 import Footer from './components/Footer'
 import DisplayProject from './components/DisplayProject'
 import GearSetup from './components/GearSetup'
+import Modal from './components/Modal'
 // import { Storage } from 'aws-amplify'
 
 const images = require.context('./assets/timelapse/timeLapse1', true)
@@ -14,6 +15,15 @@ const imageList = images.keys().map((image: string) => images(image))
 
 function App() {
 	const [pictures, setPictures] = useState<string[]>([])
+	const [showModal, setShowModal] = useState(false)
+
+	const handleModalOpen = () => {
+		setShowModal(true)
+	}
+
+	const handleModalClose = () => {
+		setShowModal(false)
+	}
 
 	useEffect(() => {
 		fetchPictures()
@@ -47,6 +57,7 @@ function App() {
 
 	return (
 		<>
+			{showModal && <Modal message="Future features that I plan on adding" closeModal={handleModalClose} />}
 			<div id="main-content" className="bg-slate-300 w-full border border-stone-800 bg-fixed bg-cover">
 				<header className="bg-transparent flex flex-col">
 					<h1 className="ablsolute text-4xl text-white font-bold m-2">Time Lapse Compilation</h1>
@@ -95,7 +106,7 @@ function App() {
 				</div>
 			</div>
 			<div className=""></div>
-			<Footer />
+			<Footer modal={handleModalOpen} />
 		</>
 	)
 }

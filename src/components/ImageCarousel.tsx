@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import EffectCoverflow from 'swiper'
-import Pagination from 'swiper'
-import Navigation from 'swiper'
+import { EffectCoverflow, Navigation, Pagination } from 'swiper/modules'
 import 'swiper/css'
 import 'swiper/css/effect-coverflow'
 import 'swiper/css/pagination'
@@ -28,12 +26,13 @@ const ImageCarousel: React.FC<imagesProps> = ({ name, description, imageList }) 
 
 	return (
 		<div className="relative overflow-hidden h-[600px]  border-2 border-black rounded-lg">
-			<div id="image slider" className="flex flex-row overflow-scroll w-full">
+			<div id="image slider" className="slider-container flex flex-row overflow-scroll w-full">
 				<Swiper
 					effect={'coverflow'}
 					grabCursor={true}
 					centeredSlides={true}
 					loop={true}
+					pagination={{ el: '.swiper-pagination', clickable: true }}
 					slidesPerView={'auto'}
 					coverflowEffect={{
 						rotate: 0,
@@ -41,12 +40,13 @@ const ImageCarousel: React.FC<imagesProps> = ({ name, description, imageList }) 
 						depth: 100,
 						modifier: 2.5
 					}}
+					modules={[EffectCoverflow, Pagination, Navigation]}
 					className="swiper_container"
 				>
 					{images.length > 1 &&
 						images.map((image, index) => (
-							<SwiperSlide>
-								<img src={image} alt="" onMouseEnter={viewImage} />
+							<SwiperSlide className="swiper_slide">
+								<img src={image} alt="" className="swiper_image" onMouseEnter={viewImage} />
 							</SwiperSlide>
 						))}
 					<div className="slider-controler"></div>

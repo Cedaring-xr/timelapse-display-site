@@ -62,4 +62,19 @@
 	.box-shadow {
 		box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	}
+
+	/* swiper */
+	.slider-container {
+		overflow: hidden;
+	}
+	.swiper_container {
+		width: auto;
+	}
+	.swiper_slide {
+		margin: 0;
+	}
+	.swiper_image {
+		height: 250px;
+		border-radius: 10px;
+	}
 }

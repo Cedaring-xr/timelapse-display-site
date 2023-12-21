@@ -16,7 +16,7 @@ const DisplayProject: React.FC<projectProps> = ({ projectName, videoTitle, image
 	const fetchImages = () => {}
 
 	return (
-		<div className="w-full border-neutral-100 border-opacity-80 border-4 rounded-xl bg-transparent items-center justify-center my-8 overflow-hidden">
+		<div className="w-full border-neutral-100 border-opacity-80 border-4 rounded-xl bg-transparent items-center justify-center my-8 overflow-hidden max-w-[1600px] mx-auto">
 			<div className="w-full rounded-md bg-stone-700 text-white justify-center flex flex-col">
 				<h2 className="sans-font text-3xl text-center mt-1">{projectName}</h2>
 				<Video title={videoTitle} />
