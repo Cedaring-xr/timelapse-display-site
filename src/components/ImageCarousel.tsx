@@ -25,23 +25,22 @@ const ImageCarousel: React.FC<imagesProps> = ({ name, description, imageList }) 
 	const viewImage = () => {}
 
 	return (
-		<div className="relative overflow-hidden h-[600px]  border-2 border-black rounded-lg">
-			<div id="image slider" className="slider-container flex flex-row overflow-scroll w-full">
+		<div className="relative overflow-hidden h-[350px]  border-2 border-black rounded-lg">
+			<div id="image slider" className="">
 				<Swiper
 					effect={'coverflow'}
 					grabCursor={true}
 					centeredSlides={true}
 					loop={true}
 					pagination={{ el: '.swiper-pagination', clickable: true }}
-					slidesPerView={'auto'}
+					slidesPerView={2}
 					coverflowEffect={{
 						rotate: 0,
 						stretch: 0,
 						depth: 100,
-						modifier: 2.5
+						modifier: 1
 					}}
 					modules={[EffectCoverflow, Pagination, Navigation]}
-					className="swiper_container"
 				>
 					{images.length > 1 &&
 						images.map((image, index) => (
@@ -49,7 +48,6 @@ const ImageCarousel: React.FC<imagesProps> = ({ name, description, imageList }) 
 								<img src={image} alt="" className="swiper_image" onMouseEnter={viewImage} />
 							</SwiperSlide>
 						))}
-					<div className="slider-controler"></div>
 				</Swiper>
 			</div>
 		</div>

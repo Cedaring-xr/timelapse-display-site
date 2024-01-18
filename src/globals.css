@@ -64,17 +64,19 @@
 	}
 
 	/* swiper */
+
 	.slider-container {
-		overflow: hidden;
+		width: 100%;
 	}
-	.swiper_container {
-		width: auto;
-	}
+
 	.swiper_slide {
 		margin: 0;
 	}
 	.swiper_image {
-		height: 250px;
+		height: 350px;
 		border-radius: 10px;
 	}
+}
+
+@layer utilities {
 }
